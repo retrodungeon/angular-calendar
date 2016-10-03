@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-3 col-sm-offset-3">
-                <div class="btn-group" data-toggle="buttons">
+                <div class="btn-group pull-right" data-toggle="buttons">
                     <label class="btn btn-info" ng-class="{active: $ctrl.showConcurrent}">
                         <input type="checkbox" value=""
                             ng-model="$ctrl.showConcurrent"/>
@@ -66,9 +66,9 @@
         <div class="list-group " 
             ng-if="$ctrl.events">
             <a class="list-group-item"
-                ng-repeat="event in $ctrl.events | orderBy: 'starttime'"
+                ng-repeat="event in $ctrl.events | orderBy: 'showfrom' | unique: ($ctrl.showConcurrent ? '' : 'showfrom')"
                 ui-sref="event({id: event.id})">
-                <span>{{::event.name}}</span>
+                <span>{{::event.showfrom}} {{::event.name}}</span>
                 <span class="label" 
                     ng-class="{ 'label-default': event.type === 'regular', 
                         'label-primary': event.type === 'important',

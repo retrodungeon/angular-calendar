@@ -10,8 +10,8 @@
                   "short": "This is test event",
                   "long": "This is test event where we test cool stuff"
                 },
-                "showfrom": "10:00:00",
-                "showuntil": "20:00:00",
+                "showfrom": "10:00",
+                "showuntil": "20:00",
                 "startdate": "2016-09-12",
                 "enddate": "2016-09-30",
                 "sellfrom": "2016-08-12",
@@ -41,14 +41,14 @@
                 "type": "promoted",
                 "sortorder": 2
             }, {
-                "id": "2",
-                "name": "Serious business meet-up",
+                "id": "1",
+                "name": "Second serious business meet-up",
                 "description": {
-                  "short": "This is test event",
+                  "short": "This is test promo event",
                   "long": "This is test event where we test cool stuff"
                 },
-                "showfrom": "11:00:00",
-                "showuntil": "20:00:00",
+                "showfrom": "11:00",
+                "showuntil": "20:00",
                 "startdate": "2016-10-12",
                 "enddate": "2016-10-30",
                 "sellfrom": "2016-04-12",
@@ -71,7 +71,7 @@
                     "description": "Good guy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 75
                     }
                 }],
                 "status": "planned",
@@ -108,7 +108,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -163,7 +163,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -218,7 +218,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -273,7 +273,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -328,7 +328,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -383,7 +383,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -438,7 +438,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -493,7 +493,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -548,7 +548,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -603,7 +603,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -658,7 +658,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -713,7 +713,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -768,7 +768,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
@@ -823,7 +823,7 @@
                     "description": "Good boy",
                     "payment": {
                         "date": "07-10-2016",
-                        "amount": 75-4
+                        "amount": 1
                     }
                 }, {
                     "name": "Jane Doe",
