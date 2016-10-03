@@ -9,11 +9,12 @@
                     ng-src="{{event.images[0].src}}" alt="{{event.description.short}}"/>
                 <figcaption class="caption">
                     <h3>
-                    {{event.name}}
+                        {{event.name}}
                     </h3>
                     <p>{{event.description.short}}</p>
-                    <a ui-sref="event({id: event.id})" class="btn btn-default">
-                    See more...
+                    <a class="btn btn-default"
+                        ui-sref="event({id: event.id})">
+                        See more...
                     </a>
                 </figcaption>
                 </figure>
@@ -23,7 +24,8 @@
 </section>
 <section class="">
     <h2>Upcoming Events</h2>
-    <div class="panel panel-default" ng-repeat="(startdate, events) in $ctrl.events | limitTo: 10 | groupBy: 'startdate'">
+    <div class="panel panel-default" 
+        ng-repeat="(startdate, events) in $ctrl.events | limitTo: 10 | groupBy: 'startdate'">
         <div class="panel-heading">{{startdate}}</div>
         <div class="list-group">
             <a class="list-group-item"

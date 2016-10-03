@@ -74,11 +74,6 @@
             this.showConcurrentEvents = function(value) {
                 this.showConcurrent = value;
             }
-
-            function getFormattedMonth(date) {
-                return date.format('MMMM YYYY');
-            }
-
         }
 
         return {
@@ -87,5 +82,4 @@
             templateUrl: './app/calendar/calendar.tpl.html'        
         }
     }
-
 } ());
