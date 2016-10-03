@@ -1,0 +1,15 @@
+.event {
+    text-align: left;
+    
+    &--important {
+        background-color: $brand-primary;
+    }
+
+    &--promoted {
+        background-color: $brand-info;
+    }
+
+    &--regular {
+        background-color: white;
+    }
+}

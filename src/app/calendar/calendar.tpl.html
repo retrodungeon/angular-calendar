@@ -1,0 +1,80 @@
+<h3>Today is {{$ctrl.today}}</h3>
+<section class="row">
+    <section class="col-xs-12">
+        <section class="calendar row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="btn-group btn-group-justified">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info"
+                            ng-click="$ctrl.getPreviousMonth()">Previous</button>
+                    </div>
+                    <div class="btn-group text-center">
+                        {{$ctrl.month}}
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info"
+                            ng-click="$ctrl.getNextMonth()">Next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-sm-offset-3">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-info" ng-class="{active: $ctrl.showConcurrent}">
+                        <input type="checkbox" value=""
+                            ng-model="$ctrl.showConcurrent"/>
+                        Show Concurrent events
+                    </label>
+                </div>
+                <!--<div class="btn-group">
+                    <button type="button" class="btn btn-info"
+                        ng-click="$ctrl.showConcurrentEvents(true)">Show Concurrent</button>
+                    <button type="button" class="btn btn-info"
+                        ng-click="$ctrl.showConcurrentEvents(false)">Hide Concurrent</button>
+                </div>-->
+            </div>
+            <!--Calendar controls-->
+            
+            <div class="weekdays weekdays--header col-xs-12">
+                <div class="weekdays__item"
+                    ng-repeat="weekday in $ctrl.WEEKDAYS">
+                    {{weekday}}
+                </div>
+            </div>
+
+            <div class="weekdays col-xs-12" ng-repeat="week in $ctrl.weeks">
+                <div class="weekdays__item day" 
+                    ng-repeat="day in week.days"
+                    ng-class="{'weekdays__item--different': !day.isCurrentMonth,
+                            'day--has-events': day.events.length}">
+                    <sup class="day__number">{{::day.number}}</sup>
+                    <ol class="day__events list list-unstyled"
+                        ng-if="day.events && day.events.length"
+                        ng-click="$ctrl.onSelect(day.events)">
+                        <li class="event" 
+                            ng-repeat="event in day.events | unique: ($ctrl.showConcurrent ? '' : 'showfrom')"
+                            ng-class="{ 'event--regular': event.type === 'regular', 
+                                        'event--important': event.type === 'important',
+                                        'event--promoted': event.type === 'promoted'}">
+                            {{::event.name}}
+                        </li>
+                    </ol>
+                </div>
+            </div>    
+        </section>
+    </section>
+    <section class="col-xs-12">
+        <div class="list-group " 
+            ng-if="$ctrl.events">
+            <a class="list-group-item"
+                ng-repeat="event in $ctrl.events | orderBy: 'starttime'"
+                ui-sref="event({id: event.id})">
+                <span>{{::event.name}}</span>
+                <span class="label" 
+                    ng-class="{ 'label-default': event.type === 'regular', 
+                        'label-primary': event.type === 'important',
+                        'label-info': event.type === 'promoted'}">
+                {{::event.type}}</span>
+            </a>
+        </div>
+    </section>
+</section>

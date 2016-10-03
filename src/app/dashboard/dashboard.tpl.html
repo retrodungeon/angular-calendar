@@ -1,0 +1,41 @@
+<section class="row">
+    <section class="col-xs-12">
+        <h2>Promoted Events</h2>
+        <ul class="events--protomoted row list list-unstyled">
+            <li class="col-xs-12 col-sm-4" 
+                ng-repeat="event in $ctrl.events | filter: { type: 'promoted' }">
+                <figure class="thumbnail col-xs-12 center-block">
+                <img class="img-responsive" 
+                    ng-src="{{event.images[0].src}}" alt="{{event.description.short}}"/>
+                <figcaption class="caption">
+                    <h3>
+                    {{event.name}}
+                    </h3>
+                    <p>{{event.description.short}}</p>
+                    <a ui-sref="event({id: event.id})" class="btn btn-default">
+                    See more...
+                    </a>
+                </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+</section>
+<section class="">
+    <h2>Upcoming Events</h2>
+    <div class="panel panel-default" ng-repeat="(startdate, events) in $ctrl.events | limitTo: 10 | groupBy: 'startdate'">
+        <div class="panel-heading">{{startdate}}</div>
+        <div class="list-group">
+            <a class="list-group-item"
+                ng-repeat="event in events | orderBy: 'sortorder'"
+                ui-sref="event({id: event.id})">
+                <span>{{::event.name}}</span>
+                <span class="label" 
+                    ng-class="{ 'label-default': event.type === 'regular', 
+                        'label-primary': event.type === 'important',
+                        'label-info': event.type === 'promoted'}">
+                    {{::event.type}}</span>
+            </a>
+        </div>
+    </div>
+</section>

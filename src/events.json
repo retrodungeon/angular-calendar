@@ -1,0 +1,138 @@
+(function() {
+    'use strict';
+
+    angular
+    .module('ngCalendar')
+    .constant('EventsData', 
+        [{
+            'name': 'Regular event',
+            'description': {
+                'short': 'regular event short description',
+                'long': 'regular event long description regular event long description regular event long description'
+            },
+            'dates': {
+                'occur': {
+                    'start': '2016-10-05T11:00:00',
+                    'end': '2016-10-10T12:00:00'
+                },
+                'show': {
+                    'start': '2016-10-05',
+                    'end': '2016-10-10'
+                },
+                'sale': {
+                    'start': '2016-09-05',
+                    'end': '2016-10-10'
+                }
+            },
+            'images': {
+                'large': {
+                    'src': '',
+                    'title': ''
+                },
+                'medium': {
+                    'src': '',
+                    'title': ''
+                },
+                'small': {
+                    'src': '',
+                    'title': ''
+                }
+            },
+            'prices': {
+                'start': '',
+                'middle': '',
+                'end': ''
+            },
+            'participants': [{}],
+            'status': 'planned',
+            'type': 'regular',
+            'sortorder': 2
+        }, {
+            'name': 'Promo event',
+            'description': {
+                'short': 'promo event short description',
+                'long': 'promo event long description regular event long description regular event long description'
+            },
+            'dates': {
+                'occur': {
+                    'start': '2016-10-05T11:00:00',
+                    'end': '2016-10-10T12:00:00'
+                },
+                'show': {
+                    'start': '2016-10-05',
+                    'end': '2016-10-10'
+                },
+                'sale': {
+                    'start': '2016-09-05',
+                    'end': '2016-10-10'
+                }
+            },
+            'images': {
+                'large': {
+                    'src': '',
+                    'title': ''
+                },
+                'medium': {
+                    'src': '',
+                    'title': ''
+                },
+                'small': {
+                    'src': '',
+                    'title': ''
+                }
+            },
+            'prices': {
+                'start': '',
+                'middle': '',
+                'end': ''
+            },
+            'participants': [{}],
+            'status': 'planned',
+            'type': 'promoted',
+            'sortorder': 1
+        }, {
+            'name': 'Important event',
+            'description': {
+                'short': 'Important event short description',
+                'long': 'Important event long description Important event long description Important event long description'
+            },
+            'dates': {
+                'occur': {
+                    'start': '2016-10-05T11:00:00',
+                    'end': '2016-10-10T12:00:00'
+                },
+                'show': {
+                    'start': '2016-10-05',
+                    'end': '2016-10-10'
+                },
+                'sale': {
+                    'start': '2016-09-05',
+                    'end': '2016-10-10'
+                }
+            },
+            'images': {
+                'large': {
+                    'src': '',
+                    'title': ''
+                },
+                'medium': {
+                    'src': '',
+                    'title': ''
+                },
+                'small': {
+                    'src': '',
+                    'title': ''
+                }
+            },
+            'prices': {
+                'start': '',
+                'middle': '',
+                'end': ''
+            },
+            'participants': [{}],
+            'status': 'planned',
+            'type': 'important',
+            'sortorder': 0
+        }])
+})();
+

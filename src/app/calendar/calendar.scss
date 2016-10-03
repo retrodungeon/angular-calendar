@@ -1,0 +1,53 @@
+.weekdays {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &--header &__item {
+        height: 3rem;
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 0 calc(100%/7);
+        align-items: center;
+        justify-content: center;
+        height: 10rem;
+        padding: 2rem 0.5rem;
+
+        text-align: center;
+        border: solid 0.1rem black;
+
+        & + & {
+            border-left: 0;
+        }
+
+        &--different {
+            opacity: .7;
+            background-color: lightgray;
+        }
+    }
+}
+
+.day {
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    overflow: hidden;
+
+    &--has-events {
+        cursor: pointer;
+    }
+
+    &__number {
+        position: absolute;
+        left: .5rem;
+        top: 1rem;
+    }
+
+    &__events {
+        white-space: nowrap;
+    }
+}

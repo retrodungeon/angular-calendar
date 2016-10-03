@@ -1,0 +1,15 @@
+<figure>
+    <img class="img-responsive" 
+        ng-src="{{$ctrl.event.images[0].src}}"/>
+        <section class="well">
+        <h2 class="">{{$ctrl.event.name}}</h2>
+        <p>{{$ctrl.event.description.long}}</p>
+    </section>
+</figure>
+
+<h3>Participants</h3>
+<ul class="list list-unstyled">
+    <li ng-repeat="participant in $ctrl.event.participants">
+        <p>{{participant.name}}, {{participant.age}} - {{participant.description}} </p>
+    </li>
+</ul>
